@@ -1,0 +1,18 @@
+language: generic
+
+deploy:
+
+  provider: s3
+
+  access_key_id: AKIAJOJ5IZTFWQTULKSA
+
+  secret_access_key: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
+
+    
+  bucket: git-to-amazon-s3-max-salo-outputbucket-mxcy82um9cam
+
+  on:
+
+    repo: maxsalo17/MaxSalo
+
+  acl: public_read
