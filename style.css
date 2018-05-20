@@ -1,0 +1,166 @@
+body
+{
+   background:#e9e9ea;
+}
+
+.header
+{
+   text-align: center;
+   background: #ffffff;
+   font-family: Impact, Charcoal, sans-serif;
+   width: 100%;
+   
+}
+
+h1
+{
+   font-size: 150%; 
+   color: #590059;
+}
+
+p
+{
+  margin: 1%;
+   font-size: 85%; 
+   color: white;
+}
+
+.headertext
+{
+   font-size: 85%; 
+   color: #6f616f;
+   
+}
+
+.flex-container{
+display: flex;
+	width: 100%;
+	flex-wrap: nowrap;   
+}
+
+.leftcolumn
+{
+
+   float: left;
+   width: 125px;
+   min-width: 125px;
+   text-align: left;
+   background: #590059;
+   font-family: Impact, Charcoal, sans-serif;
+   flex-shrink: initial;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: space-around;
+   box-sizing: border-box;
+}
+
+.maincolumn
+{
+   margin-left: 1%;  
+   float: left;
+   width: 80%;
+   text-align: left;
+   font-family: Arial, Charcoal, sans-serif;
+   font-size: small;
+   flex-shrink: initial;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-around;
+   box-sizing: border-box;
+   
+}
+.topcolumn
+{
+   background: #ffffff;
+   margin-bottom: 5px;   
+}
+
+.bottomcolumn
+{
+   background: #ffffff;  
+}
+.maintext
+{
+   margin: 1%;
+   font-size: 85%; 
+   color: black;
+   flex-shrink: initial;
+}
+
+.rightcolumn
+{
+   float: left;
+   width: 125px;
+   min-width: 125px;
+   margin-left: 1% ;
+   text-align: left;
+   font-size: small;
+   background: #590059;
+   font-family: Impact, Charcoal, sans-serif;
+   flex-shrink: initial;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: space-around;
+   box-sizing: border-box;
+   
+}
+
+.footer
+{
+   width: inherit;
+   height: auto;
+    text-align: center;
+   background: #ffffff;
+   font-family: Impact, Charcoal, sans-serif;
+   flex-shrink: initial;
+}
+
+.footertext
+{
+  text-align: left;
+  color: #590059;
+  font-size: medium;
+}
+
+
+
+@media screen and (max-width: 500px) {
+	.leftcolumn, .maincolumn , .rightcolumn{
+      margin-top: 5%;
+      margin-right: 1%;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		min-width: 400px;
+     width: 100%;
+	}
+
+   .leftcolumn
+   {
+      width: 125px;
+      min-width: 125px;
+      margin-left: 35%;
+   }
+   .rightcolumn
+   {
+        width: 125px;
+        min-width: 125px;
+        margin-left: 35%;
+   }
+   .flex-container{
+      display: flex;
+      width: 100%;   
+      flex-wrap: wrap;   
+   }
+    .footertext
+   {
+      font-size: small;    
+   }
+}
+
+
