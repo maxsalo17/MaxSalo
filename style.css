@@ -6,8 +6,8 @@ body
 .header
 {
    text-align: center;
-   background: #ffffff;
-   font-family: Impact, Charcoal, sans-serif;
+   background: #307cb7;
+   font-family:'Calibri', fantasy;
    width: 100%;
    
 }
@@ -15,7 +15,7 @@ body
 h1
 {
    font-size: 150%; 
-   color: #590059;
+   color: #ffffbe;
 }
 
 p
@@ -28,7 +28,7 @@ p
 .headertext
 {
    font-size: 85%; 
-   color: #6f616f;
+   color: #ffffbe;
    
 }
 
@@ -42,10 +42,10 @@ display: flex;
 {
 
    float: left;
-   width: 125px;
-   min-width: 125px;
+   width: 200px;
+   min-width: 200px;
    text-align: left;
-   background: #590059;
+   background: #0eaf41;
    font-family: Impact, Charcoal, sans-serif;
    flex-shrink: initial;
    display: flex;
@@ -53,6 +53,14 @@ display: flex;
    flex-direction: column;
    justify-content: space-around;
    box-sizing: border-box;
+   order: 1;
+}
+
+.sidebartext
+{
+  margin: 5px;
+  font-family: Arial, monospace;
+  font-size: small;
 }
 
 .maincolumn
@@ -69,17 +77,18 @@ display: flex;
    flex-direction: row;
    justify-content: space-around;
    box-sizing: border-box;
+   order: 2;
    
 }
 .topcolumn
 {
-   background: #ffffff;
+   background: #f45541;
    margin-bottom: 5px;   
 }
 
 .bottomcolumn
 {
-   background: #ffffff;  
+   background: #f4b241;  
 }
 .maintext
 {
@@ -92,12 +101,12 @@ display: flex;
 .rightcolumn
 {
    float: left;
-   width: 125px;
-   min-width: 125px;
+   width: 200px;
+   min-width: 200px;
    margin-left: 1% ;
    text-align: left;
    font-size: small;
-   background: #590059;
+   background: #7631b7;
    font-family: Impact, Charcoal, sans-serif;
    flex-shrink: initial;
    display: flex;
@@ -105,6 +114,7 @@ display: flex;
    flex-direction: column;
    justify-content: space-around;
    box-sizing: border-box;
+   order: 3;
    
 }
 
@@ -113,23 +123,25 @@ display: flex;
    width: inherit;
    height: auto;
     text-align: center;
-   background: #ffffff;
+   background: #323147;
    font-family: Impact, Charcoal, sans-serif;
    flex-shrink: initial;
+
 }
 
 .footertext
 {
   text-align: left;
-  color: #590058;
   font-size: medium;
+  font-family:  sans-serif;
 }
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
 	.leftcolumn, .maincolumn , .rightcolumn{
-      margin-top: 5%;
+      margin-top: 5px;
+      margin-bottom: 5px;
       margin-right: 1%;
 		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
@@ -142,15 +154,23 @@ display: flex;
 
    .leftcolumn
    {
-      width: 125px;
-      min-width: 125px;
-      margin-left: 35%;
+      width: 200px;
+      min-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      order: 1;
    }
    .rightcolumn
    {
-        width: 125px;
-        min-width: 125px;
-        margin-left: 35%;
+        width: 200px;
+        min-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        order: 2;
+   }
+   .maincolumn
+   {
+      order:3;    
    }
    .flex-container{
       display: flex;
