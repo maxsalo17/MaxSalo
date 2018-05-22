@@ -20,7 +20,7 @@ h1
 
 p
 {
-  margin: 1%;
+  margin: 5px;
    font-size: 85%; 
    color: white;
 }
@@ -65,7 +65,7 @@ display: flex;
 
 .maincolumn
 {
-   margin-left: 1%;  
+   margin-left: 5px;  
    float: left;
    width: 100%;
    text-align: left;
@@ -107,7 +107,7 @@ display: flex;
   }
 .maintext
 {
-   margin: 1%;
+   margin: 5px;
    font-size: 85%; 
    color: black;
    flex-shrink: initial;
@@ -118,7 +118,7 @@ display: flex;
    float: left;
    width: 200px;
    min-width: 200px;
-   margin-left: 1% ;
+   margin-left: 5px ;
    text-align: left;
    font-size: small;
    background: #7631b7;
@@ -157,7 +157,7 @@ display: flex;
 	.leftcolumn, .maincolumn , .rightcolumn{
       margin-top: 5px;
       margin-bottom: 5px;
-      margin-right: 1%;
+      margin-right: 5px;
      -webkit-flex-direction: column;
      -moz-flex-direction: column;
      -ms-flex-direction: column;
