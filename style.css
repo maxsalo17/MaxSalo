@@ -20,7 +20,7 @@ h1
 
 p
 {
-  margin: 5px;
+  margin: 1%;
    font-size: 85%; 
    color: white;
 }
@@ -29,13 +29,15 @@ p
 {
    font-size: 85%; 
    color: #ffffbe;
+   margin: 0;
    
 }
 
 .flex-container{
-display: flex;
+ display: flex;
 	width: 100%;
-	flex-wrap: nowrap;   
+	flex-wrap: nowrap;
+ 
 }
 
 .leftcolumn
@@ -51,8 +53,6 @@ display: flex;
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
-   justify-content: space-around;
-   box-sizing: border-box;
    order: 1;
 }
 
@@ -65,7 +65,7 @@ display: flex;
 
 .maincolumn
 {
-   margin-left: 5px;  
+ 
    float: left;
    width: 100%;
    text-align: left;
@@ -75,15 +75,12 @@ display: flex;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   justify-content: space-around;
-   box-sizing: border-box;
    order: 2;
    
 }
 .topcolumn
 {
    background: #f45541;
-   margin-bottom: 5px;   
 }
 
 .bottomcolumn
@@ -94,7 +91,6 @@ display: flex;
    flex-wrap: nowrap;
    flex-direction: row;
    justify-content: space-around;
-   box-sizing: border-box;
 }
  .five
   {
@@ -107,7 +103,6 @@ display: flex;
   }
 .maintext
 {
-   margin: 5px;
    font-size: 85%; 
    color: black;
    flex-shrink: initial;
@@ -118,7 +113,6 @@ display: flex;
    float: left;
    width: 200px;
    min-width: 200px;
-   margin-left: 5px ;
    text-align: left;
    font-size: small;
    background: #7631b7;
@@ -127,7 +121,6 @@ display: flex;
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
-   justify-content: space-around;
    box-sizing: border-box;
    order: 3;
    
@@ -137,7 +130,7 @@ display: flex;
 {
    width: inherit;
    height: auto;
-    text-align: center;
+   text-align: center;
    background: #323147;
    font-family: Impact, Charcoal, sans-serif;
    flex-shrink: initial;
@@ -146,6 +139,7 @@ display: flex;
 
 .footertext
 {
+  margin: 0;
   text-align: left;
   font-size: medium;
   font-family:  sans-serif;
@@ -157,7 +151,7 @@ display: flex;
 	.leftcolumn, .maincolumn , .rightcolumn{
       margin-top: 5px;
       margin-bottom: 5px;
-      margin-right: 5px;
+      margin-right: 1%;
      -webkit-flex-direction: column;
      -moz-flex-direction: column;
      -ms-flex-direction: column;
