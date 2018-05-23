@@ -1,2 +1,2 @@
 # MaxSalo
-Max Salo WP Labs
+Max Salo WP Labs Compare Branch
