@@ -1,0 +1,18 @@
+ #elements {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+   
+}
+
+.elem {
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+img{
+    height: 150px;
+    width: 220px;
+}
