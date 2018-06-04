@@ -1,5 +1,5 @@
  #elements {
-    height: 200px;
+    margin: 0 auto;
     width: 100%;
     overflow: hidden;
    
@@ -7,12 +7,16 @@
 
 .elem {
     float: left;
-    padding-right: 15px;
-    padding-bottom: 10px;
-    padding-left: 15px;
+    margin: 0 auto;
 }
 
 img{
-    height: 150px;
-    width: 220px;
+    margin: 0 auto;
+   width: 700px;
+   height: 700px;
+}
+
+body
+{
+    background: rgb(222, 228, 222);
 }
