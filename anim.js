@@ -24,11 +24,11 @@ $( function() {
 				color: "#ffffff",
 			}, 1000 );
 			$("#img").animate({
-
+				width: "200px",
 				height: "110px"
 			},500);
 			$("#img").animate({
-				width: "200px",
+				
 				opacity: 0
 			},500);
 			$("#block").animate({
