@@ -14,7 +14,7 @@
 #effect {
 	width: 500px;
 	height: 170px;
-	; 
+	border-radius: 40px;
 	position: relative; 
 	background: white; 
 	color: white;
@@ -44,6 +44,7 @@ z-index: 1000;
 	width: 200px; 
 	height: 110px; 
 	display: block;
+	border-radius: 40px;
 	margin-left: auto; 
     margin-right: auto;
 }
@@ -60,6 +61,8 @@ z-index: 1000;
 }
 p
 {
+	margin: 15px 20px;
+	margin-bottom: 20px;
 	font-family: Calibri, monospace;
 }
 
@@ -68,6 +71,11 @@ p
     width: 100%;
     overflow: hidden;
    
+}
+
+h3
+{
+	font-family: Calibri, monospace;
 }
 
 .elem {

@@ -1,5 +1,9 @@
 var angle = 0;
-  setInterval(function(){
-    angle+=3;
-  $("#photo").rotate(angle);
-  },50);
+  setInterval(rotation,50);
+
+  function rotation(){
+
+      angle+=3;
+    $("#photo").rotate(angle);
+    
+  }
