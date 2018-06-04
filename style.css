@@ -1,201 +1,616 @@
-body
-{
-   background:#e9e9ea;
+body {
+    background: #09081c;
+    
+    
+    margin: 0;
+	padding: 0;
 }
-
-.header
-{
-   text-align: center;
-   background: #307cb7;
-   font-family:'Calibri', fantasy;
-   width: 100%;
-   
-}
-
-h1
-{
-   font-size: 150%; 
-   color: #ffffbe;
-}
-
-p
-{
-  margin: 1%;
-   font-size: 85%; 
-   color: white;
-}
-
-.headertext
-{
-   font-size: 85%; 
-   color: #ffffbe;
-   margin: 0;
-   
-}
-
 .flex-container{
- display: flex;
+  display: flex;
 	width: 100%;
-	flex-wrap: nowrap;
- 
+	flex-wrap: nowrap;   
+    flex-shrink: initial;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+.one {
+    /*height: 230px;*/
+    width: 100%;
+    background: url('images/headback.jpg');
+    display: flex;
+    flex-direction: row;
+    
 }
 
-.leftcolumn
-{
 
-   width: 200px;
-   min-width: 200px;
-   text-align: left;
-   background: #0eaf41;
-   font-family: Impact, Charcoal, sans-serif;
-   flex-shrink: initial;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column;
-   order: 1;
+
+ @font-face {
+    font-family: Shrift; /* Гарнитура шрифта */
+    src: url(Shrift.ttf); /* Путь к файлу со шрифтом */
+   }
+
+@font-face {
+    font-family: s5; /* Гарнитура шрифта */
+    src: url(s5.ttf); /* Путь к файлу со шрифтом */
+   }
+
+@font-face {
+    font-family: s6; /* Гарнитура шрифта */
+    src: url(s6.ttf); /* Путь к файлу со шрифтом */
+   }
+
+.header-text{
+    
+    font-family: 'Permanent Marker', cursive;
+    opacity: 0.7;
+    color: white;
+    font-size: 5vw;
+    margin: 50px auto;
+    
 }
 
-.sidebartext
+.two
 {
-  margin: 5px;
-  font-family: Arial, monospace;
-  font-size: small;
+    width: 100%;
+    height: 20px;
+    background: #42b0f4;
+    box-shadow: 5px 5px 10px rgba(0,0,0,1)
 }
 
-.maincolumn
+.three
 {
- 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+
+
+
+    #slidera {
+   background:url(images/logo.jpg);
    width: 100%;
-   text-align: left;
-   font-family: Arial, Charcoal, sans-serif;
-   font-size: small;
-   flex-shrink: initial;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   order: 2;
-   
+   margin:0;
+   overflow: visible;
+   position: relative;
 }
-.topcolumn
+
+#maska {
+   overflow: hidden;
+   height: 360px;
+}
+
+#slidera ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+#slidera li {
+   width: 50%;  /* Ширина изображения */
+   height: 360px; /* Высота изображения */
+   position: absolute;
+   top: -325px;	/* Исходное положение  (за пределами слайдера) */
+   list-style: none;
+}
+
+#slidera li.firstanimation {
+  -moz-animation:cycle 25s linear infinite;	
+	-webkit-animation:cycle 25s linear infinite;		
+}
+
+#slidera li.secondanimation {
+   -moz-animation:cycletwo 25s linear infinite;
+	-webkit-animation:cycletwo 25s linear infinite;		
+}
+
+#slidera li.thirdanimation {
+  -moz-animation:cyclethree 25s linear infinite;
+	-webkit-animation:cyclethree 25s linear infinite;		
+}
+
+#slidera li.fourthanimation {
+   -moz-animation:cyclefour 25s linear infinite;
+	-webkit-animation:cyclefour 25s linear infinite;		
+}
+
+
+@keyframes cycle {
+   0%  { top: 0px; } /* При запуске слайдера, первое изображение уже видимо */
+   4%  { top: 0px; } /* Стартовая позиция */
+   16% { top: 0px; opacity:1; z-index:0; } /* С 4% до 16 % (3 секунды) изображение видимо */
+   20% { top: 325px; opacity: 0; z-index: 0; } /* с 16% до 20% (1 секунды)выход изображения*/
+   21% { top: -325px; opacity: 0; z-index: -1; } /* Возвращение на исходную позицию за пределами маски */
+   92% { top: -325px; opacity: 0; z-index: 0; }
+   96% { top: -325px; opacity: 0; } /* С 96% до 100% (1 секунда) – вход */
+   100%{ top: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+   0%  { top: -325px; opacity: 0; } /* Исходная позиция за пределами маски */
+   16% { top: -325px; opacity: 0; }/* Начало движения с 16% */
+   20% { top: 0px; opacity: 1; }
+   24% { top: 0px; opacity: 1; }  /* С 20% до 24% (в течении 1 секунды) — вход*/
+   36% { top: 0px; opacity: 1; z-index: 0; }   /* С 24% до 36 % (3 секунды) изображение видимо */
+   40% { top: 325px; opacity: 0; z-index: 0; } /* С 36% до 40% (1 секунда)— выход */
+   41% { top: -325px; opacity: 0; z-index: -1; }   /* Возврат на исходную позицию */
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+   0%  { top: -325px; opacity: 0; }
+   36% { top: -325px; opacity: 0; }
+   40% { top: 0px; opacity: 1; }
+   44% { top: 0px; opacity: 1; }
+   56% { top: 0px; opacity: 1; }
+   60% { top: 325px; opacity: 0; z-index: 0; }
+   61% { top: -325px; opacity: 0; z-index: -1; }
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+   0%  { top: -325px; opacity: 0; }
+   56% { top: -325px; opacity: 0; }
+   60% { top: 0px; opacity: 1; }
+   64% { top: 0px; opacity: 1; }
+   76% { top: 0px; opacity: 1; z-index: 0; }
+   80% { top: 325px; opacity: 0; z-index: 0; }
+   81% { top: -325px; opacity: 0; z-index: -1; }
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+
+.progress-bar { 
+	position:relative;
+	top:5px;
+	width:100%; 
+	height:5px;
+	background:#000;
+	-moz-animation:fullexpand 25s ease-out infinite;
+	-webkit-animation:fullexpand 25s ease-out infinite;
+}
+@keyframes fullexpand {
+   /* В этих ключевых кадрах анимация стационарна */
+   0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+
+   /* В этих — оживает */
+   4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.3; }
+
+   /* В этих — плавно заполняется */
+   16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.7; }
+
+   /* В этих ключевых кадрах индикатор выполнения завершил свой путь */
+   17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.3; }
+
+   /* В этих ключевых кадрах индикатор выполнения исчезнет, а затем возобновит цикл */
+   18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+}
+
+#slidera .tooltip {
+   background: rgba(0,0,0,0.7);
+   width: 300px;
+   height: 60px;
+   position: relative;
+   bottom: 90px;
+   left: 210px;
+    	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;  
+}
+
+#slidera .tooltip h7 {
+   color: #fff;
+   font-size: 24px;
+   font-weight: 300;
+   line-height: 60px;
+   padding: 0 0 0 10px;
+}
+
+#slidera .tooltip {
+
+   transition: all 0.3s ease-in-out;
+}
+
+#slidera li#first:hover .tooltip,
+#slidera li#second:hover .tooltip,
+#slidera li#third:hover .tooltip,
+#slidera li#fourth:hover .tooltip {
+   left: 0px;
+}
+
+#slidera:hover li, 
+#slidera:hover .progress-bar {
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+
+.scroll-img{
+    width: 100%;
+    height: 360px;
+}
+
+.imageslider
 {
-   background: #f45541;
+    width: 50%;
+    height: 360px;
+    background: #0e0711;
 }
 
-.bottomcolumn
+.column
 {
-   background: #f4b241;
-   flex-shrink: initial;
-   display: flex;
-   flex-wrap: nowrap;
-   flex-direction: row;
-   justify-content: space-around;
+    width: 50%;
+    height: 360px;
+    background: #09081c;
 }
- .five
-  {
-    background: #3c72c9;
-  }
-  
-  .six
-  {
-    background: #c9c63b;
-  }
-.maintext
+
+.columntext
 {
-   font-size: 85%; 
-   color: black;
-   flex-shrink: initial;
+    line-height: 25px;
+    color: white;
+    padding:0px 20px 15px 20px;
+    font-family: Calibri;
+    font-size: x-large;
 }
 
-.rightcolumn
+h3
 {
-   width: 200px;
-   min-width: 200px;
-   text-align: left;
-   font-size: small;
-   background: #7631b7;
-   font-family: Impact, Charcoal, sans-serif;
-   flex-shrink: initial;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column;
-   box-sizing: border-box;
-   order: 3;
-   
+    letter-spacing: 13px;
+    padding:0px 20px 0px 20px;
+    color:#ebecf3;
+    font-size: 3vw;
+    font-family: s5;    
 }
 
-.footer
+
+.four
 {
-   width: inherit;
-   height: auto;
-   text-align: center;
-   background: #323147;
-   font-family: Impact, Charcoal, sans-serif;
-   flex-shrink: initial;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }
 
-.footertext
+#left2
 {
-  margin: 0;
-  text-align: left;
-  font-size: medium;
-  font-family:  sans-serif;
+    position: relative;
+    background: #ccd4e0;
+    
+    
+}
+#left2 .columntext
+{
+    color: darkslategrey; 
+}
+#right2
+{
+    background: #e9e6ff;
+}
+
+#h3l2{
+color : #5093ff;        
+}
+
+#pumpimg1{
+    position: absolute;
+    height: 150px;
+    width: 98px;
+    bottom: 0px;
+}
+
+#pumpimg2{
+    height: 10vw;
+    width: 15vw;
+    margin-top: 6%;
+    margin-left: 20%;
+}
+
+.five{
+    width: 100%;
+    background: url(images/formback.jpg);
+}
+
+.contactform{
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+h4
+{
+    font-family: s5;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+    color: #ebecf3;
+
+}
+
+.contactform input, .contactform textarea {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    background: rgba(243, 243, 243, 0.836);
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input, textarea, select {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+.submitbutton
+{
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 40px;
+    background: #7d3de4;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: s5, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    color : #eff5f7;
+    letter-spacing: 10px;
+    
+    
+}
+
+#buttonbuy
+{
+    width: 300px;
+    margin-left:27%;
+}
+
+.submitbutton:hover
+{
+    background: #9655ff;
+}
+
+.submitbutton:active
+{
+    background: #6a3cb6;
 }
 
 
+input:invalid:not(:placeholder-shown) {border-color: hotpink; border: 2px;}
+input:valid:not(:placeholder-shown) {border-color: cornflowerblue; border: 2px; }
+label
+{
+   font-family: Calibri;
+    font-weight: normal;    
+}
+@media only screen and (max-width: 1100px)
+{
+     .three, .four,.six,.seven,.eight
+    {
+        flex-direction: column;
+    }
+    .dragblock
+    {
+        flex-direction: row;
+    }
 
-@media screen and (max-width: 700px) {
-	.leftcolumn, .maincolumn , .rightcolumn{
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-right: 1%;
-     -webkit-flex-direction: column;
-     -moz-flex-direction: column;
-     -ms-flex-direction: column;
-     -o-flex-direction: column;
-     flex-direction: column;
-     width: 100%;
-	}
+    .imageslider, .column
+    {
+        width:100%;
+        margin: 0 auto;
+    }
+    .columntext
+{
+    line-height: 25px;
+    font-size: 15px;
+}
 
-   .leftcolumn
-   {
-      width: 200px;
-      min-width: 200px;
-      margin-left: auto;
-      margin-right: auto;
-      order: 1;
-   }
-   .rightcolumn
-   {
-        width: 200px;
-        min-width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        order: 2;
-   }
-   .maincolumn
-   {
-      order:3;    
-   }
-   
-   .bottomcolumn
-  {
-     
-     flex-wrap: nowrap;
-     flex-direction: column;
-     
-  }
- 
+h3
+{
+    letter-spacing: 13px;
+    font-size: 25px;
+      
+}
+}
 
-   .flex-container{
-      display: flex;
-      width: 100%;   
-      flex-wrap: wrap;   
-   }
-    .footertext
-   {
-      font-size: small;    
-   }
+.topbutton {
+width:50px;
+text-align:center;
+padding:10px;
+position:fixed;
+bottom:50px;
+right:27px;
+cursor:pointer;
+color:#fff;
+font-family: s5;
+font-size:12px;
+text-decoration: none;
+outline: none;
+display: inline-block;
+border: 1px solid #fff;
+border-radius: 20px;
+z-index: 2000;
 }
 
 
+.topbutton:hover,
+.topbutton:active {
+  background-color: rgba(255, 255, 255, 0.616);
+  color: #000;
+}
+
+
+.dragblock
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#dragfrom
+{
+    background: #ccd4e0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#dragfrom img
+{
+    margin: 30px;
+    box-shadow: 5px 4px rgb(0,0,0,0.05)
+}
+
+#dragto
+{
+    background: #09081c;
+    height: auto;
+}
+
+#dragto img
+{
+    width: 70%;
+    height: 70%;
+    margin: 5%;
+    margin-left: 15%;
+    box-shadow: 15px 15px rgb(0,0,0,0.2)
+}
+
+#dragto h4
+{
+    color: #d9f3f0;
+}
+.h4txt
+{
+    color: darkslategrey;
+    text-align: center;
+}
+
+.six{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#drawid {
+position: relative;
+height: auto;
+background: #383c42;
+}
+
+#drawtext{
+    position: absolute;
+    top:0px;
+    text-align: center;
+    font-family: s6;
+    font-size: 2vw;
+    letter-spacing: 0.6vw;
+}
+
+#drawCanvas
+{
+    z-index: 2;
+    width: 400px;
+    height: 355px;
+    background: rgba(255, 255, 255, 0.61);
+}
+
+#nearcanvas
+{
+    font-family: s5;
+    font-size: 30px;
+    letter-spacing: 15px;
+    color: #eceef8;
+    
+}
+
+.absoluteflexcontainer
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    margin: 0 0 0 10%;
+}
+
+#canvascolumn{
+    height: 600px;
+    width: 50%;
+}
+
+#c{
+  width: 100%;
+  height: 597px;
+  background: #ffffff;
+}
+
+#canvasimg
+{
+    font-family: s5, Calibri, monospace;
+    font-size: 1.3vw;
+    color: white;
+    letter-spacing: 15px;
+   position: absolute;
+    top:35%;
+    bottom: 40%;
+    left: 38%;
+    right: 32%;
+    
+}
+
+#idColor{    
+    background: 0;
+    border-width: 0;
+    border-radius: 20px;
+}
+
+#choosecolor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#choosecolor .columntext {
+    margin: 0;
+}
+
+#slider{
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+}
+
+.seven
+{
+    height: 400px;
+}
+
+.table
+{
+    font-family: s5, monospace;
+    font-size: large;
+    margin: 0 auto;
+    border-style: dotted;
+    border: white;
+    color: white;
+}
