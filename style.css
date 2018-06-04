@@ -614,3 +614,8 @@ background: #383c42;
     border: white;
     color: white;
 }
+
+#load_song, #butt
+{
+	border-radius: 0px;
+}
